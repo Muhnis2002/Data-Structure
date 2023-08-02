@@ -24,3 +24,24 @@ int read(int a[],int n)
 	}
 	return 0;
 }
+int search(int a[],int n,int x)
+{
+	int i;
+	for(i=0;i<n;++i)
+	{
+		if(a[i]==x)
+		{
+			n=-1;
+			break;
+		}
+	}
+	if(n==-1)
+	{
+		printf("The Element is found at %d th location of the Array : ",i+1);
+	}
+	else
+	{
+		printf("The Element is not found in the Array");
+	}
+	return 0;
+}  
