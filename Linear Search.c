@@ -15,3 +15,12 @@ int main()
 	search(a,n,x);
 	return 0;
 }
+int read(int a[],int n)
+{
+	for(int i=0;i<n;++i)
+	{
+		printf("Enter the %d th Element of the Array : ",i+1);
+		scanf("%d",&a[i]);
+	}
+	return 0;
+}
