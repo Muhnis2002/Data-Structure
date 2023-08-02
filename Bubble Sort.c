@@ -13,3 +13,12 @@ int main()
 	sort(a,n);
 	return 0;
 }
+int read(int a[],int n)
+{
+	for(int j=0;j<n;++j)
+	{
+		printf("Enter the %d th Element of the array : ",j+1);
+		scanf("%d",&a[j]);
+	}
+	return 0;
+}
