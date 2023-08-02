@@ -22,3 +22,25 @@ int read(int a[],int n)
 	}
 	return 0;
 }
+int sort(int a[],int n)
+{
+	int t;
+	for(int i=0;i<n-1;++i)
+	{
+		for(int j=0;j<n-i-1;++j)
+		{
+			if(a[j+1]<a[j])
+			{
+				t=a[j];
+				a[j]=a[j+1];
+				a[j+1]=t;
+			}
+		}
+	}
+	printf("The Sorted array is : ");
+	for(int j=0;j<n;++j)
+	{
+		printf("%d ",a[j]);
+	}
+	return 0;
+}
