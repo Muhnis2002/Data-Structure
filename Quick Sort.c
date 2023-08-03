@@ -21,3 +21,35 @@ int main()
 	}
 	return 0;
 }
+void quicksort(int a[],int f,int l)
+{
+	int i,j,piv,tem;
+	piv=f;
+	i=f;
+	j=l;
+	if(f<l)
+	{
+		while(i<j)
+		{
+			while(a[i]<=a[piv]&&i<l)
+			{
+				i++;
+			}
+			while(a[j]>a[piv])
+			{
+				j--;
+			}
+			if(i<j)
+			{
+				tem=a[i];
+				a[i]=a[j];
+				a[j]=tem;
+			}
+		}
+		tem=a[piv];
+		a[piv]=a[j];
+		a[j]=tem;
+		quicksort(a,f,j-1);
+		quicksort(a,j+1,l);
+	}
+}
