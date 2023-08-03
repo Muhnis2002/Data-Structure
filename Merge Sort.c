@@ -19,3 +19,20 @@ int main()
 	print(a,n);
 	return 0;
 }
+int read(int a[],int l)
+{
+	for(int i=0;i<l;++i)
+	{
+		printf("Enter the %d th Element of the array : ",i+1);
+		scanf("%d",&a[i]);
+	}
+	return 0;
+}
+int print(int a[],int l)
+{
+	for(int i=0;i<l;++i)
+	{
+		printf("%d  ",a[i]);
+	}
+	return 0;
+}
