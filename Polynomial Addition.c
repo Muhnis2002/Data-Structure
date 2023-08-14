@@ -48,3 +48,38 @@ int read(struct poly  p[10])
 	printf("%dx^%d\n",p[i].coeff,p[i].expo);
 	return 0;
 }
+int add(struct poly k1[10],struct poly k2[10],int t1,int t2)
+{
+	int i=0,j=0,k=0;
+	while(i<t1&&j<t2)
+	{
+		if(k1[i].expo==k2[j].expo)
+		{
+			p3[k].coeff=k1[i].coeff+k2[j++].coeff;
+			p3[k++].expo=k1[i++].expo;
+		}
+		else if(k1[i].expo>k2[j].expo)
+		{
+			p3[k].coeff=k1[i].coeff;
+			p3[k++].expo=k1[i++].expo;
+		}
+		else if(k2[j].expo>k1[i].expo)
+		{
+			p3[k].coeff=k2[j].coeff;
+			p3[k++].expo=k2[j++].expo;
+		}
+	}
+	while(i<t1)
+	{
+		p3[k].coeff=k1[i].coeff;
+		p3[k++].expo=k1[i++].expo;
+	}
+	while(j<t2)
+	{
+		p3[k].coeff=k2[j].coeff;
+		p3[k++].expo=k2[j++].expo;
+	}
+	printf("\nThe Sum of Entered Polynomials is : ");
+	display(p3,k);
+	return 0;
+}
