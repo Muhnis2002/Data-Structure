@@ -65,3 +65,24 @@ int display(int a[50][50],int r,int c)
 	}
 	return 0;
 }
+int tuple(int a[50][50],int r,int c,int tu[50][50])
+{
+	int i,j,k=1;
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			if(a[i][j]!=0)
+			{
+				tu[k][0]=i;
+				tu[k][1]=j;
+				tu[k][2]=a[i][j];
+				++k;				
+			}
+		}
+	}
+	tu[0][0]=r;
+	tu[0][1]=c;
+	tu[0][2]=k-1;
+	return k;
+}
