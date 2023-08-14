@@ -39,3 +39,29 @@ int main()
 	}
 	return 0;
 }
+int read(int a[50][50],int r,int c)
+{
+	int i,j;
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			printf("Enter the  [%d][%d] th Element of the Matrix : ",i,j);
+			scanf("%d",&a[i][j]);
+		}
+	}
+	return 0;
+}
+int display(int a[50][50],int r,int c)
+{
+	int i,j;
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			printf("%d  ",a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
