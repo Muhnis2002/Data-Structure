@@ -42,3 +42,26 @@ int main()
 	return 0;
 	
 }
+int tuple(int a[50][50],int r,int c,int tr[50][50])
+{
+	int i,j,k=1;
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			if(a[i][j]!=0)
+			{
+				tr[k][0]=i;
+				tr[k][1]=j;
+				tr[k][2]=a[i][j];
+				++k;				
+			}
+		}
+	}
+	tr[0][0]=r;
+	tr[0][1]=c;
+	tr[0][2]=k-1;
+	printf("\nThe Tuple Form is : \n");
+	display(tr,k,3);
+	return 0;
+}
