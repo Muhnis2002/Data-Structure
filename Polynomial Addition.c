@@ -25,3 +25,26 @@ int main()
 	add(p1,p2,t1,t2);
 	return 0;	
 }
+int read(struct poly  p[10])
+{
+	int n,i;
+	printf("Enter the Number of terms in the Polynomial : ");
+	scanf("%d",&n);
+	for(i=0;i<n;++i)
+	{
+		printf("Enter the Coefficient of %d th Term of the Polynomial : ",i+1);
+		scanf("%d",&p[i].coeff);
+		printf("Enter the  Exponent  of  %d th Term of the Polynomial : ",i+1);
+		scanf("%d",&p[i].expo);
+	}
+	return n;
+}
+{
+	int i;
+	for(i=0;i<t-1;++i)
+	{
+		printf("%dx^%d + ",p[i].coeff,p[i].expo);
+	}
+	printf("%dx^%d\n",p[i].coeff,p[i].expo);
+	return 0;
+}
