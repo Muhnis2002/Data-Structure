@@ -86,3 +86,46 @@ int tuple(int a[50][50],int r,int c,int tu[50][50])
 	tu[0][2]=k-1;
 	return k;
 }
+int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50])
+{
+	int m=1,n=1,k=1,i,j,r=tua[0][0],c=tua[0][1];
+	tuc[0][0]=tua[0][0];
+	tuc[0][1]=tua[0][1];
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			if(((tua[m][0]==i)&&(tua[m][1]==j))&&((tub[n][0]==i)&&tub[n][1]==j))
+			{
+				tuc[k][0]=i;
+				tuc[k][1]=j;
+				tuc[k++][2]=tua[m++][2]+tub[n++][2];
+			}
+			else if((tua[m][0]==i)&&(tua[m][1]==j))
+			{
+				tuc[k][0]=i;
+				tuc[k][1]=j;
+				tuc[k++][2]=tua[m++][2];
+			}
+			else if((tub[n][0]==i)&&(tub[n][1]==j))
+			{
+				tuc[k][0]=i;
+				tuc[k][1]=j;
+				tuc[k++][2]=tub[n++][2];
+			}
+		}
+	}
+	tuc[0][2]=k-1;
+	printf("\nThe Added Sparse Matrices is : \n");
+	for(i=0;i<r;++i)
+	{
+		for(j=0;j<c;++j)
+		{
+			printf("%d  ",a[i][j]+b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\nThe Tuple Form of the Added Sparse Matrices is : \n");
+	display(tuc,k,3);
+	return 0;
+}
