@@ -87,3 +87,35 @@ int tuple(int a[50][50], int r, int c, int tr[50][50])
     display(tr, k, 3);
     return 0;
 }
+/* 
+
+OUTPUT:
+Enter the Number of Rows in the Sparse Matrix: 3
+Enter the Number of Columns in the Sparse Matrix: 4
+
+Enter the [0][0] th Element of the Sparse Matrix: 0
+Enter the [0][1] th Element of the Sparse Matrix: 0
+Enter the [0][2] th Element of the Sparse Matrix: 1
+Enter the [0][3] th Element of the Sparse Matrix: 0
+Enter the [1][0] th Element of the Sparse Matrix: 0
+Enter the [1][1] th Element of the Sparse Matrix: 2
+Enter the [1][2] th Element of the Sparse Matrix: 0
+Enter the [1][3] th Element of the Sparse Matrix: 0
+Enter the [2][0] th Element of the Sparse Matrix: 3
+Enter the [2][1] th Element of the Sparse Matrix: 0
+Enter the [2][2] th Element of the Sparse Matrix: 0
+Enter the [2][3] th Element of the Sparse Matrix: 4
+
+The Sparse Matrix is:
+0  0  1  0
+0  2  0  0
+3  0  0  4
+
+The Tuple Form is:
+3  4  5
+0  2  1
+1  1  2
+2  0  3
+2  3  4
+*/
+
