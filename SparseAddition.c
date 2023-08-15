@@ -145,6 +145,7 @@ int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50])
 
 
 /*
+OUTPUT:
 Enter the Number of rows in the 1st Matrix : 3
 Enter the Number of columns in the 1st Matrix : 3
 Enter the Number of rows in the 2nd Sparse Matrix : 3
