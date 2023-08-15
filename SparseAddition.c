@@ -1,9 +1,10 @@
 #include<stdio.h>
-int a[50][50],b[50][50];
-int read(int s[50][50],int r,int c);
-int display(int a[50][50],int r,int c);
-int tuple(int a[50][50],int r,int c,int tu[50][50]);
-int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50]);
+int a[50][50],b[50][50]; // Declare two arrays to store the input matrices
+int read(int s[50][50],int r,int c); // Function to read matrix elements
+int display(int a[50][50],int r,int c); // Function to display matrix elements
+int tuple(int a[50][50],int r,int c,int tu[50][50]); // Convert matrix to tuple format
+int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50]); // Function to add sparse matrices
+
 int main()
 {
 	int  r1,r2,c1,c2,tua[50][50],tub[50][50],tuc[50][50],f;
@@ -13,25 +14,25 @@ int main()
 	scanf("%d",&c1);
 	printf("Enter the Number of rows in the 2nd Sparse  Matrix  : ");
 	scanf("%d",&r2);
-	printf("Enter the Number of rows in the 2nd Sparse Matrix   : ");
+	printf("Enter the Number of columns in the 2nd Sparse Matrix   : ");
 	scanf("%d",&c2);
-	if(r1==r2&&c1==c2)
+	if(r1==r2 && c1==c2)
 	{
 		printf("\nEnter the Elements in the 1st Sparse Matrix  \n");
-		read(a,r1,c1);
+		read(a,r1,c1); // Read elements of the first matrix
 		printf("\nThe Entered Sparse Matrix is : \n");
-		display(a,r1,c1);
-		f=tuple(a,r1,c1,tua);
+		display(a,r1,c1); // Display the entered matrix
+		f = tuple(a,r1,c1,tua); // Convert matrix to tuple
 		printf("\nThe Tuple Form of the Entered Sparse Matrix is : \n");
-		display(tua,f,3);
+		display(tua,f,3); // Display tuple form
 		printf("\nEnter the Elements in the 2nd Sparse Matrix  \n");
-		read(b,r2,c2);
+		read(b,r2,c2); // Read elements of the second matrix
 		printf("\nThe Entered Sparse Matrix is : \n");
-		display(b,r1,c1);
-		f=tuple(b,r1,c1,tub);
+		display(b,r1,c1); // Display the entered matrix
+		f = tuple(b,r1,c1,tub); // Convert matrix to tuple
 		printf("\nThe Tuple Form of the Entered Sparse Matrix is : \n");
-		display(tub,f,3);
-		SparseAdd(tua,tub,tuc);
+		display(tub,f,3); // Display tuple form
+		SparseAdd(tua,tub,tuc); // Add the two sparse matrices
 	}		
 	else
 	{
@@ -39,8 +40,11 @@ int main()
 	}
 	return 0;
 }
+
+// Function to read matrix elements
 int read(int a[50][50],int r,int c)
 {
+	// Read each element of the matrix
 	int i,j;
 	for(i=0;i<r;++i)
 	{
@@ -52,8 +56,11 @@ int read(int a[50][50],int r,int c)
 	}
 	return 0;
 }
+
+// Function to display matrix elements
 int display(int a[50][50],int r,int c)
 {
+	// Display each element of the matrix
 	int i,j;
 	for(i=0;i<r;++i)
 	{
@@ -65,8 +72,11 @@ int display(int a[50][50],int r,int c)
 	}
 	return 0;
 }
+
+// Function to convert matrix to tuple format
 int tuple(int a[50][50],int r,int c,int tu[50][50])
 {
+	// Convert matrix to tuple
 	int i,j,k=1;
 	for(i=0;i<r;++i)
 	{
@@ -86,8 +96,11 @@ int tuple(int a[50][50],int r,int c,int tu[50][50])
 	tu[0][2]=k-1;
 	return k;
 }
+
+// Function to add two sparse matrices
 int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50])
 {
+	// Add two sparse matrices represented in tuple format
 	int m=1,n=1,k=1,i,j,r=tua[0][0],c=tua[0][1];
 	tuc[0][0]=tua[0][0];
 	tuc[0][1]=tua[0][1];
@@ -121,11 +134,11 @@ int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50])
 	{
 		for(j=0;j<c;++j)
 		{
-			printf("%d  ",a[i][j]+b[i][j]);
+			printf("%d  ",a[i][j]+b[i][j]); // Output of matrix addition
 		}
 		printf("\n");
 	}
 	printf("\nThe Tuple Form of the Added Sparse Matrices is : \n");
-	display(tuc,k,3);
+	display(tuc,k,3); // Display tuple form of the added matrix
 	return 0;
 }
