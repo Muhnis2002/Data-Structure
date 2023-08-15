@@ -142,3 +142,64 @@ int SparseAdd(int tua[50][50],int tub[50][50],int tuc[50][50])
 	display(tuc,k,3); // Display tuple form of the added matrix
 	return 0;
 }
+
+
+/*
+Enter the Number of rows in the 1st Matrix : 3
+Enter the Number of columns in the 1st Matrix : 3
+Enter the Number of rows in the 2nd Sparse Matrix : 3
+Enter the Number of columns in the 2nd Sparse Matrix : 3
+
+Enter the Elements in the 1st Sparse Matrix
+Enter the [0][0] th Element of the Matrix : 1
+Enter the [0][1] th Element of the Matrix : 0
+Enter the [0][2] th Element of the Matrix : 0
+Enter the [1][0] th Element of the Matrix : 0
+Enter the [1][1] th Element of the Matrix : 0
+Enter the [1][2] th Element of the Matrix : 2
+Enter the [2][0] th Element of the Matrix : 0
+Enter the [2][1] th Element of the Matrix : 3
+Enter the [2][2] th Element of the Matrix : 0
+
+The Entered Sparse Matrix is :
+1 0 0
+0 0 2
+0 3 0
+
+The Tuple Form of the Entered Sparse Matrix is :
+3 3 4
+0 0 1
+1 2 2
+2 1 3
+
+Enter the Elements in the 2nd Sparse Matrix
+Enter the [0][0] th Element of the Matrix : 0
+Enter the [0][1] th Element of the Matrix : 0
+Enter the [0][2] th Element of the Matrix : 0
+Enter the [1][0] th Element of the Matrix : 0
+Enter the [1][1] th Element of the Matrix : 0
+Enter the [1][2] th Element of the Matrix : 0
+Enter the [2][0] th Element of the Matrix : 0
+Enter the [2][1] th Element of the Matrix : 0
+Enter the [2][2] th Element of the Matrix : 0
+
+The Entered Sparse Matrix is :
+0 0 0
+0 0 0
+0 0 0
+
+The Tuple Form of the Entered Sparse Matrix is :
+3 3 1
+0 0 0
+
+The Added Sparse Matrices is :
+1 0 0
+0 0 2
+0 3 0
+
+The Tuple Form of the Added Sparse Matrices is :
+3 3 4
+0 0 1
+1 2 2
+2 1 3
+*/
