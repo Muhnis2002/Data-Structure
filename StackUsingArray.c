@@ -66,3 +66,14 @@ int main()
 	}while(f>0&&f<5);
 	return 0;
 }
+int display()
+{
+	printf("The Elements in the Stack are :\n");
+	for(int i=top;i>=0;--i)
+	{
+		printf("          |  %d  |\n",a[i]);
+		printf("          |_____|\n");
+	}
+	printf("\n");
+	return 0;
+}
