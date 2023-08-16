@@ -77,3 +77,31 @@ int display()
 	printf("\n");
 	return 0;
 }
+int push(int el)
+{
+	if(top<49)
+	{
+		++top;
+	    a[top]=el;
+	}
+	else
+	{
+		printf("Stack is Full");
+		return 0;
+	}
+	return 0;
+}
+int pop()
+{
+	if(top==-1)
+	{
+		printf("Stack is Empty\n");
+	}
+	else
+	{
+		f=a[top];
+		--top;
+		printf("%d is Poped from the Stack  \n",f);
+	}
+	return 0;
+}
