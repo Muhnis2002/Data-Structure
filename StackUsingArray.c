@@ -1,3 +1,9 @@
+/*
+  Muhammed Muhnis T K
+  C-program to Implement Stack Using Array
+  JEC21CS083
+*/
+
 #include <stdio.h>
 
 // Declare global variables
@@ -98,3 +104,82 @@ int pop() {
     return 0;
 }
 
+/*
+OUTPUT:
+Enter the Number of Elements to be Pushed to the Stack(Maximum Size=50): 5
+Enter the 1 th Element to be Pushed to the Stack : 10
+Enter the 2 th Element to be Pushed to the Stack : 20
+Enter the 3 th Element to be Pushed to the Stack : 30
+Enter the 4 th Element to be Pushed to the Stack : 40
+Enter the 5 th Element to be Pushed to the Stack : 50
+
+STACK OPERATIONS
+1.PUSH
+2.POP
+3.DISPLAY
+4.Terminate Program
+Enter the Choice Number : 3
+The Elements in the Stack are :
+          |  50  |
+          |_____|
+          |  40  |
+          |_____|
+          |  30  |
+          |_____|
+          |  20  |
+          |_____|
+          |  10  |
+          |_____|
+          
+STACK OPERATIONS
+1.PUSH
+2.POP
+3.DISPLAY
+4.Terminate Program
+Enter the Choice Number : 1
+Enter the Element to be Pushed to the Stack : 25
+25 is Pushed to the Stack as 6 th Location Element
+
+The Elements in the Stack are :
+          | 25 |
+          |____|
+          | 50 |
+          |____|
+          | 40 |
+          |____|
+          | 30 |
+          |____|
+          | 20 |
+          |____|
+          | 10 |
+          |____|
+          
+STACK OPERATIONS
+1.PUSH
+2.POP
+3.DISPLAY
+4.Terminate Program
+Enter the Choice Number : 2
+25 is Popped from the Stack
+
+The Elements in the Stack are :
+          | 50 |
+          |____|
+          | 40 |
+          |____|
+          | 30 |
+          |____|
+          | 20 |
+          |____|
+          | 10 |
+          |____|
+          
+STACK OPERATIONS
+1.PUSH
+2.POP
+3.DISPLAY
+4.Terminate Program
+Enter the Choice Number : 4
+
+
+*/
