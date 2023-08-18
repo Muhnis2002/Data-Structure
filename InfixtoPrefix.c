@@ -85,3 +85,9 @@ void in_to_pr()
     strrev(p); // Reverse the postfix expression to get the prefix expression
     printf("The Prefix Expression is: %s", p);
 }
+
+/*
+OUTPUT:
+Enter the Infix Expression: (A+B)*C-(D/E+F)*G
+The Prefix Expression is: -*+ABC+DEFG
+*/
