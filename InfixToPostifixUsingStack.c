@@ -85,3 +85,8 @@ void in_to_po()
     p[j] = '\0'; // Terminate the postfix expression string
     printf("The Postfix Expression is %s ", p); // Print the postfix expression
 }
+/*
+OUTPUT:
+Enter the Infix Expression :a+b*(c-d^e)^(f+g*h)-i
+The Postfix Expression is abcde^-*fgh*+i- 
+*/
