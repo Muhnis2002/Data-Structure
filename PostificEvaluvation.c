@@ -26,3 +26,51 @@ int main()
 	eval_po();
 	return 0;
 }
+int eval_po()
+{
+	int p=0,op1,op2,res;
+	while(p<=k)
+	{
+		if(isdigit(po[p].ch[0]))
+		{
+			s[++top]=atoi(po[p].ch);	
+		}
+		else
+		{
+			op2=s[top--];
+			op1=s[top--];
+			switch(po[p].ch[0])
+			{
+				case '+':
+				{
+					res=op1+op2;
+					break;
+				}
+				case '-':
+				{
+					res=op1-op2;
+					break;
+				}
+				case '*':
+				{
+					res=(op1)*(op2);
+					break;
+				}
+				case '/':
+				{
+					res=op1/op2;
+					break;
+				}
+				case '^':
+				{
+					res=pow(op1,op2);
+					break;
+				}
+			}
+			s[++top]=res;
+		}
+		++p;
+	}
+	printf("\nThe Result of Expression is : %d",s[0]);
+	return 0;
+}	
