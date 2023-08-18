@@ -74,3 +74,44 @@ int eval_po()
 	printf("\nThe Result of Expression is : %d",s[0]);
 	return 0;
 }	
+int read()
+{
+	printf("Enter the Postfix Expression Separating Each Token by Single Space : ");
+	gets(ch);
+	for(i=0;i<strlen(ch);++k)
+	{
+		if(isdigit(ch[i]))
+		{
+			for(m=0;ch[i]!=' ';++i,++m)
+			{
+				po[k].ch[m]=ch[i];
+			}			
+			l=0;
+		}
+		else if(ch[i]=='*'||ch[i]=='+'||ch[i]=='-'||ch[i]=='/'||ch[i]=='^')
+		{
+			po[k].ch[0]=ch[i];
+			l=0;
+			++i;			
+		}
+		else
+		{
+			++l;
+			++i;
+			--k;
+			if(l==2)
+			{
+				break;  
+			}
+		}
+	}
+	return 0;
+}	
+int display()
+{
+	for(int j=0;j<=k;++j)
+	{
+		printf(" %s",po[j].ch);
+	}
+	return 0;
+}
