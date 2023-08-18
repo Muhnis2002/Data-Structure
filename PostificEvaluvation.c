@@ -129,3 +129,10 @@ int display()
 	}
 	return 0;
 }
+
+/*
+OUTPUT:
+Enter the Postfix Expression Separating Each Token by Single Space : 5 2 + 8 3 ^ -
+The Entered Postfix Expression is : 5 2 + 8 3 ^ -
+The Result of Expression is : 49
+*/
