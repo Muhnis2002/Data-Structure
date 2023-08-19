@@ -80,3 +80,15 @@ void quicksort(int a[], int f, int l)
         quicksort(a, j + 1, l);
     }
 }
+
+/*
+OUTPUT:
+Enter the limit : 6
+Enter the 1 th Element of the Array : 45
+Enter the 2 th Element of the Array : 23
+Enter the 3 th Element of the Array : 12
+Enter the 4 th Element of the Array : 67
+Enter the 5 th Element of the Array : 34
+Enter the 6 th Element of the Array : 89
+The Sorted Array is : 12  23  34  45  67  89
+*/
