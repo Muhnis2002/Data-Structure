@@ -132,3 +132,10 @@ int eval_pr()
     printf("\nThe Result of Expression is : %d", s[0]);
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the Prefix Expression Separating Each Token by Single Space : + * 5 6 - 8 2
+The Entered Prefix Expression is :  + * 5 6 - 8 2
+The Result of Expression is : 46
+*/
