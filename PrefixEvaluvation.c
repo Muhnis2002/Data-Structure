@@ -64,3 +64,51 @@ int display()
 	}
 	return 0;
 }	
+int eval_pr()
+{
+	int p=0,op1,op2,res;
+	while(p<=k)
+	{
+		if(isdigit(po[p].ch[0]))
+		{
+			s[++top]=atoi(po[p].ch);
+		}
+		else
+		{
+			op1=s[top--];
+			op2=s[top--];
+			switch(po[p].ch[0])
+			{
+				case '+':
+				{
+					res=op1+op2;
+					break;
+				}
+				case '-':
+				{
+					res=op1-op2;
+					break;
+				}
+				case '*':
+				{
+					res=(op1)*(op2);
+					break;
+				}
+				case '/':
+				{
+					res=op1/op2;
+					break;
+				}
+				case '^':
+				{
+					res=pow(op1,op2);
+					break;
+				}
+			}
+			s[++top]=res;
+		}
+		++p;
+	}
+	printf("\nThe Result of Expression is : %d",s[0]);
+	return 0;
+}	
