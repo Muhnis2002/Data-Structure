@@ -146,4 +146,78 @@ int display()
     }
     return 0;
 }
+/*
+Enter the Number of Elements to be Entered in the Queue(MAXIMUM SIZE=20) : 5
+Enter the 1 th Element to be Enqueued : 3
+Enter the 2 th Element to be Enqueued : 2
+Enter the 3 th Element to be Enqueued : 6
+Enter the 4 th Element to be Enqueued : 8
+Enter the 5 th Element to be Enqueued : 9
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 1
+Queue is Full
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 2
+3 is Dequeued
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+     |  2  |  6  |  8  |  9  |
+_____|_____|_____|_____|_____|
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 1
+Queue is Full
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 9
+Wrong Input
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+     |  2  |  6  |  8  |  9  |
+_____|_____|_____|_____|_____|
+
+_____QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+Enter the Option Number : 4
+Program Terminated
+
+------------------
+(program exited with code: 0)
+
+Press any key to continue . . .
+*/
 
