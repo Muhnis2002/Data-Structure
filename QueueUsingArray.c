@@ -65,3 +65,38 @@ int main()
 	}
 	return 0;
 }
+int enqueue(int it)
+{
+	if((fr==-1)&&(re==-1))
+	{
+		fr=0;
+		re=0;
+		qu[re]=it;
+	}
+	else if((fr==0)&&(re==n))
+	{
+		printf("Queue is Full\n");
+	}
+	else
+	{
+		qu[++re]=it;
+	}
+	return 0;
+}
+int dequeue()
+{
+	if((fr==-1)&&(re==-1))
+	{
+		printf("Queue is Empty\n");
+	}
+	else if(fr==re)
+	{
+		printf("%d is Dequeued\n",qu[fr]);
+		fr=re=-1;
+	}
+	else 
+	{
+		printf("%d is Dequeued\n",qu[fr++]);
+	}
+	return 0;
+}
