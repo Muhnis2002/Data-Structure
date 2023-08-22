@@ -217,3 +217,53 @@ int display()
     }
     return 0;  // Return 0 to indicate successful execution
 }
+
+/*
+OUTPUT;
+Enter the Number of Elements to be Entered in the Queue(MAXIMUM SIZE=20) : 5
+Enter the 1 th Element to be Enqueued : 3
+Enter the 2 th Element to be Enqueued : 4
+Enter the 3 th Element to be Enqueued : 2
+Enter the 4 th Element to be Enqueued : 6
+Enter the 5 th Element to be Enqueued : 7
+
+_____CIRCULAR QUEUE OPERATION_____
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display
+4.Terminate Program
+
+Enter the Option Number : 1
+Circular Queue is Full
+
+Enter the Option Number : 2
+3 is Dequeued
+
+Enter the Option Number : 2
+4 is Dequeued
+
+Enter the Option Number : 1
+Enter the Element to be Enqueued : 8
+8 is Enqueued
+
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+  8  |     |  2  |  6  |  7  |
+_____|_____|_____|_____|_____|
+
+Enter the Option Number : 1
+Enter the Element to be Enqueued : 4
+4 is Enqueued
+
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+  8  |  4  |  2  |  6  |  7  |
+_____|_____|_____|_____|_____|
+
+Enter the Option Number : 4
+Program Terminated
+
+------------------
+*/
