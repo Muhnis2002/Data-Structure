@@ -87,3 +87,21 @@ int enqueue(int it)
 	}
 	return 0;
 }
+int dequeue()
+{
+	if((fr==-1)&&(re==-1))
+	{
+		printf("Circular Queue is Empty\n");
+	}
+	else if(fr==re)
+	{
+		printf("%d is Dequeued\n",qu[fr]);
+		fr=re=-1;
+	}
+	else 
+	{
+		printf("%d is Dequeued\n",qu[fr]);
+		fr=(fr+1)%n;
+	}
+	return 0;
+}
