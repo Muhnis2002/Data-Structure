@@ -67,3 +67,23 @@ int main()
 	}
 	return 0;
 }
+int enqueue(int it)
+{
+	if(fr==(re+1)%n)
+	{
+		printf("Circular Queue is Full\n");
+	}
+	else if((fr==-1)&&(re==-1))
+	{
+		fr=0;
+		re=0;
+		qu[re]=it;
+	}
+	
+	else
+	{
+		re=(re+1)%n;
+		qu[re]=it;
+	}
+	return 0;
+}
