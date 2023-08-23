@@ -77,3 +77,32 @@ int main() {
 
     return 0;
 }
+
+/* 
+OUTPUT:
+Enter the Limit of array : 7
+Enter the 1 th Element of the array : 34
+Enter the 2 th Element of the array : 12
+Enter the 3 th Element of the array : 56
+Enter the 4 th Element of the array : 23
+Enter the 5 th Element of the array : 8
+Enter the 6 th Element of the array : 42
+Enter the 7 th Element of the array : 19
+The Sorted array for performing Binary Search is : 8 12 19 23 34 42 56 
+Enter the Element to be searched in the array : 23
+Element is found at Location 4 th location of the array
+
+OR
+
+Enter the Limit of array : 6
+Enter the 1 th Element of the array : 5
+Enter the 2 th Element of the array : 18
+Enter the 3 th Element of the array : 2
+Enter the 4 th Element of the array : 9
+Enter the 5 th Element of the array : 13
+Enter the 6 th Element of the array : 7
+The Sorted array for performing Binary Search is : 2 5 7 9 13 18 
+Enter the Element to be searched in the array : 11
+Element is not found in the array
+*/
+
