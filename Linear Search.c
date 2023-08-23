@@ -23,9 +23,9 @@ int search(int a[], int n, int x) {
         }
     }
     if (n == -1) {
-        printf("The Element is found at %d th location of the Array : ", i + 1);
+        printf("The Element is Found at %d th location of the Array : ", i + 1);
     } else {
-        printf("The Element is not found in the Array");
+        printf("The Element is not Found in the Array");
     }
     return 0;
 }
@@ -49,3 +49,27 @@ int main() {
 
     return 0;
 }
+
+/* 
+OUTPUT:
+Enter the Limit of Array : 5
+Enter the 1 th Element of the Array : 10
+Enter the 2 th Element of the Array : 20
+Enter the 3 th Element of the Array : 30
+Enter the 4 th Element of the Array : 40
+Enter the 5 th Element of the Array : 50
+Enter the Element to be Searched in the Array : 30
+The Element is Found at 3 th location of the Array :
+
+OR
+
+Enter the Limit of Array : 4
+Enter the 1 th Element of the Array : 7
+Enter the 2 th Element of the Array : 18
+Enter the 3 th Element of the Array : 25
+Enter the 4 th Element of the Array : 32
+Enter the Element to be Searched in the Array : 15
+The Element is not Found in the Array
+*/
+
+
