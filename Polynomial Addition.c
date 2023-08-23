@@ -82,3 +82,31 @@ int main() {
 
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the 1st Polynomial
+Enter the Number of terms in the Polynomial : 3
+Enter the Coefficient of 1 th Term of the Polynomial : 2
+Enter the Exponent of 1 th Term of the Polynomial : 3
+Enter the Coefficient of 2 th Term of the Polynomial : 5
+Enter the Exponent of 2 th Term of the Polynomial : 1
+Enter the Coefficient of 3 th Term of the Polynomial : 7
+Enter the Exponent of 3 th Term of the Polynomial : 0
+The Entered Polynomial is : 2x^3 + 5x^1 + 7x^0
+
+Enter the 2nd Polynomial
+Enter the Number of terms in the Polynomial : 4
+Enter the Coefficient of 1 th Term of the Polynomial : 3
+Enter the Exponent of 1 th Term of the Polynomial : 4
+Enter the Coefficient of 2 th Term of the Polynomial : 6
+Enter the Exponent of 2 th Term of the Polynomial : 3
+Enter the Coefficient of 3 th Term of the Polynomial : 4
+Enter the Exponent of 3 th Term of the Polynomial : 2
+Enter the Coefficient of 4 th Term of the Polynomial : 2
+Enter the Exponent of 4 th Term of the Polynomial : 0
+The Entered Polynomial is : 3x^4 + 6x^3 + 4x^2 + 2x^0
+
+The Sum of Entered Polynomials is : 3x^4 + 6x^3 + 4x^2 + 2x^0 + 2x^3 + 5x^1 + 7x^0
+*/
+
