@@ -47,3 +47,27 @@ int main() {
 
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the limit of the array : 6
+Enter the 1 th Element of the array : 34
+Enter the 2 th Element of the array : 12
+Enter the 3 th Element of the array : 56
+Enter the 4 th Element of the array : 23
+Enter the 5 th Element of the array : 8
+Enter the 6 th Element of the array : 42
+The Sorted array is : 8 12 23 34 42 56
+
+OR
+
+Enter the limit of the array : 5
+Enter the 1 th Element of the array : 5
+Enter the 2 th Element of the array : 18
+Enter the 3 th Element of the array : 2
+Enter the 4 th Element of the array : 9
+Enter the 5 th Element of the array : 13
+The Sorted array is : 2 5 9 13 18
+*/
+
+
