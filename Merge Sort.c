@@ -78,3 +78,27 @@ int main() {
 
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the limit of array : 6
+Enter the 1 th Element of the array : 45
+Enter the 2 th Element of the array : 12
+Enter the 3 th Element of the array : 78
+Enter the 4 th Element of the array : 23
+Enter the 5 th Element of the array : 56
+Enter the 6 th Element of the array : 34
+The Unsorted array is : 45  12  78  23  56  34
+The Sorted array is : 12  23  34  45  56  78
+
+OR
+
+Enter the limit of array : 5
+Enter the 1 th Element of the array : 5
+Enter the 2 th Element of the array : 8
+Enter the 3 th Element of the array : 1
+Enter the 4 th Element of the array : 3
+Enter the 5 th Element of the array : 7
+The Unsorted array is : 5  8  1  3  7
+The Sorted array is : 1  3  5  7  8
+*/
