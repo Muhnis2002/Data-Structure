@@ -137,3 +137,60 @@ int dequeue()
 	}
 	return 0;
 }
+int display()
+{
+	if((fr==-1)&&(re==-1))
+	{
+		printf("!!Queue is Empty!!\n");
+	}
+	else
+	{
+		for(i=0;i<n;++i)
+		{
+			printf("______");
+		}
+		printf("\n");
+		for(i=0;i<n;++i)
+		{
+			printf("     |");
+		}
+		printf("\n");
+		for(i=0;i<fr;++i)
+		{
+			printf("     |");
+		}
+		for(i=fr;i<=re;++i)
+		{
+			printf("  %d  |",a[i].it);
+		}
+		for(i=re;i<n-1;++i)
+		{
+			printf("     |");
+		}
+		printf("\n");
+		for(i=0;i<n;++i)
+		{
+			printf("_____|");			
+		}
+		printf("\n");
+		for(i=0;i<fr;++i)
+		{
+			printf("     |");
+		}
+		for(i=fr;i<=re;++i)
+		{
+			printf("  %d  |",a[i].pr);
+		}
+		for(i=re;i<n-1;++i)
+		{
+			printf("     |");
+		}
+		printf("\n");
+		for(i=0;i<n;++i)
+		{
+			printf("-----|");			
+		}	
+		printf("\n");	
+	}
+	return 0;
+}
