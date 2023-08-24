@@ -185,3 +185,80 @@ int display() {
 	}
     return 0;
 }
+
+/*
+OUTPUT:
+Enter the Number of Elements to be Enqueued in the Priority Queue : 5     
+
+Enter the Element to be Enqueued : 4
+Enter the Priority of Element : 3
+
+Enter the Element to be Enqueued : 2
+Enter the Priority of Element : 1
+
+Enter the Element to be Enqueued : 5
+Enter the Priority of Element : 6
+
+Enter the Element to be Enqueued : 8
+Enter the Priority of Element : 9
+
+Enter the Element to be Enqueued : 4
+Enter the Priority of Element : 4
+
+
+______Priority Queue Operations______
+1.Enqueue Operation
+2.Dequeue Operation
+3.Display Operation
+4.Terminate Program
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+  2  |  4  |  4  |  5  |  8  |
+_____|_____|_____|_____|_____|
+  1  |  3  |  4  |  6  |  9  |
+-----|-----|-----|-----|-----|
+
+Enter the Option Number : 1
+Priority Queue is Full
+
+Enter the Option Number : 2
+Dequeued item is 2
+
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+     |  4  |  4  |  5  |  8  |
+_____|_____|_____|_____|_____|
+     |  3  |  4  |  6  |  9  |
+-----|-----|-----|-----|-----|
+
+Enter the Option Number : 1
+Enter the Item to be Enqueued : 4
+Enter the Priority of the Element to be Enqueued : 3
+
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+  4  |  4  |  4  |  5  |  8  |
+_____|_____|_____|_____|_____|
+  3  |  3  |  4  |  6  |  9  |
+-----|-----|-----|-----|-----|
+
+Enter the Option Number : 2
+Dequeued item is 4
+
+Enter the Option Number : 2
+Dequeued item is 4
+
+Enter the Option Number : 3
+______________________________
+     |     |     |     |     |
+     |     |  4  |  5  |  8  |
+_____|_____|_____|_____|_____|
+     |     |  4  |  6  |  9  |
+-----|-----|-----|-----|-----|
+
+Enter the Option Number : 4
+Program Terminated
+*/
