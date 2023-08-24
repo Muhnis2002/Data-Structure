@@ -64,3 +64,58 @@ int main()
 	}
 	return 0;
 }
+int enqueue(int it,int pr)
+{
+	if((fr==0)&&(re==n-1))
+	{
+		printf("Priority Queue is Full\n");
+	}
+	else if(fr==-1)
+	{
+		fr=re=0;
+		a[fr].it=it;
+		a[fr].pr=pr;
+	}
+	else if(re==n-1)
+	{
+		for(i=fr;i<=re;++i)
+		{
+			a[i-1]=a[i];
+		}
+		--fr,--re;
+		for(i=re;i>=fr;--i)
+		{
+			if(a[i].pr<pr)
+			{
+				break;
+			}
+		}
+		loc=i+1;
+		for(i=re;i>=loc;--i)
+		{
+			a[i+1]=a[i];
+		}
+		++re;
+		a[loc].it=it;
+		a[loc].pr=pr;
+	}
+	else
+	{
+		for(i=re;i>=fr;--i)
+		{
+			if(a[i].pr<pr)
+			{
+				break;
+			}
+		}
+		loc=i+1;
+		for(i=re;i>=loc;--i)
+		{
+			a[i+1]=a[i];
+		}
+		++re;
+		a[loc].it=it;
+		a[loc].pr=pr;
+	}
+	return 0;
+}
