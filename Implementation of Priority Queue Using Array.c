@@ -119,3 +119,21 @@ int enqueue(int it,int pr)
 	}
 	return 0;
 }
+int dequeue()
+{
+	if(fr==-1)
+	{
+		printf("Priority Queue is Empty\n");
+	}
+	else if(fr==re)
+	{
+		printf("Dequeued Item is %d\n",a[fr].it);
+		fr=re=-1;
+	}
+	else
+	{
+		printf("Dequeued item is %d\n",a[fr].it);
+		++fr;
+	}
+	return 0;
+}
