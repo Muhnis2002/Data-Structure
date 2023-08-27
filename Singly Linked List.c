@@ -125,3 +125,32 @@ int insert_end(int it)
 	ptr->ln=new;
 	return 0;
 }
+int insert_key(int k,int x)
+{
+	if(head==NULL)
+	{
+		printf("Search Failed,Insertion is not possible ");
+	}
+	else
+	{
+		ptr=head;
+		while((ptr->dt!=k)&&(ptr->ln!=NULL))
+		{
+			ptr=ptr->ln;
+		}
+		if(ptr->dt!=k)
+		{
+			printf("Search Failed,Insertion is not possible ");
+		}
+		else
+		{
+			new=(struct node*)malloc(sizeof(struct node));
+			new->dt=x;
+			new->ln=ptr->ln;
+			ptr->ln=new;
+			printf("%d is Inserted after %d ",x,k);			
+		}
+		
+	}
+	return 0;
+}
