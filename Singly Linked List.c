@@ -97,3 +97,11 @@ int main()
 	}
 	return 0;
 }
+int insert_fr(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->ln=head;
+	new->dt=it;
+	head=new;
+	return 0;
+}
