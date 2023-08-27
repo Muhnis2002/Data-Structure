@@ -36,6 +36,7 @@ int main()
 	printf("6.Delete a Specified Node\n");
 	printf("7.Search for an Element in the List\n");
 	printf("8.Display\n");
+    printf("9.Terminate Program\n");
 	int o, k;
 op:
 	printf("\n\nEnter the Option Number : ");
@@ -257,6 +258,32 @@ int delete_key(int k)
 	return 0;
 }
 
+// Function to Search an Element in  the linked list
+int search(int k)
+{
+	if(head==NULL)
+	{
+		printf("List is Empty ");
+	}
+	else
+	{
+		ptr=head;
+		while((ptr->dt!=k)&&(ptr->ln!=NULL))
+		{
+			ptr=ptr->ln;
+		}
+		if(ptr->dt==k)
+		{
+			printf("Search Data is Found");
+		}
+		else
+		{
+			printf("Search Data not Found");
+		}
+	}
+	return 0;
+}
+
 // Function to display the linked list
 int display()
 {
@@ -290,3 +317,92 @@ int display()
 	}
 	return 0;
 }
+
+/*
+OUTPUT:
+____SINGLY LINKED LIST OPERATIONS____
+1.Insert at Front
+2.Insert at End
+3.Insert after a Specified Node
+4.Delete from Front
+5.Delete From End
+6.Delete a Specified Node
+7.Search for an Element in the List
+8.Display
+
+
+Enter the Option Number : 1
+Enter the Element to be Inserted : 3
+3 is Inserted at Front
+
+Enter the Option Number : 1
+Enter the Element to be Inserted : 3
+3 is Inserted at Front
+
+Enter the Option Number : 2
+Enter the Element to be Inserted : 4
+4 is Inserted at End
+
+Enter the Option Number : 2
+Enter the Element to be Inserted : 8
+8 is Inserted at End
+
+Enter the Option Number : 3
+Enter the Element to be Inserted : 5
+Enter the Key after the Element is to be Inserted : 3
+5 is Inserted after 3
+
+Enter the Option Number : 8
+       |---|   |---|   |---|   |---|   |---|
+HEAD-->| 3 |-->| 5 |-->| 3 |-->| 4 |-->| 8 |-->NULL
+       |---|   |---|   |---|   |---|   |---|
+
+Enter the Option Number : 7
+Enter the Element to be Searched : 10
+Search Data not Found
+
+Enter the Option Number : 3
+Enter the Element to be Inserted : 4
+Enter the Key after the Element is to be Inserted : 7
+Search Failed, Insertion is not possible
+
+Enter the Option Number : 3
+Enter the Element to be Inserted : 7
+Enter the Key after the Element is to be Inserted : 5
+7 is Inserted after 5
+
+Enter the Option Number : 7
+Enter the Element to be Searched : 0
+Search Data not Found
+
+Enter the Option Number : 7
+Enter the Element to be Searched : 5
+Search Data is Found
+
+Enter the Option Number : 8
+       |---|   |---|   |---|   |---|   |---|   |---|
+HEAD-->| 3 |-->| 5 |-->| 7 |-->| 3 |-->| 4 |-->| 8 |-->NULL
+       |---|   |---|   |---|   |---|   |---|   |---|
+
+Enter the Option Number : 4
+3 is Deleted
+
+Enter the Option Number : 5
+8 is Deleted
+
+Enter the Option Number : 6
+Enter Element to be Deleted : 4
+4 is Deleted
+
+Enter the Option Number : 6
+Enter Element to be Deleted : 0
+Search Key not found
+
+Enter the Option Number : 8
+       |---|   |---|   |---|
+HEAD-->| 5 |-->| 7 |-->| 3 |-->NULL
+       |---|   |---|   |---|
+
+Enter the Option Number : 9
+Program Terminated
+*/
