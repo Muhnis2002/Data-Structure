@@ -3,22 +3,30 @@
  JEC21CS083*/
 #include<stdio.h>
 #include<stdlib.h>
+
+// Define the structure for a node in the linked list
 struct node
 {
-	int dt;
-	struct node *ln;
+	int dt;             // Data of the node
+	struct node *ln;   // Pointer to the next node
 };
-struct node *head,*ptr,*new,*temp;
+
+// Declare global pointers for head, current node, new node, and temporary node
+struct node *head, *ptr, *new, *temp;
+
+// Function prototypes for various operations
 int display();
 int insert_fr(int it);
 int insert_end(int o);
-int insert_key(int k,int o);
+int insert_key(int k, int o);
 int delete_fr();
 int delete_end();
 int delete_key(int o);
 int search(int o);
+
 int main()
 {
+	// Display the menu for various operations
 	printf("\n\n____SINGLY LINKED LIST OPERATIONS____\n");
 	printf("1.Insert at Front\n");
 	printf("2.Insert at End\n");
@@ -28,65 +36,67 @@ int main()
 	printf("6.Delete a Specified Node\n");
 	printf("7.Search for an Element in the List\n");
 	printf("8.Display\n");
-	int o,k;
-	op:
+	int o, k;
+op:
 	printf("\n\nEnter the Option Number : ");
-	scanf("%d",&o);
-	if(o==1)
+	scanf("%d", &o);
+
+	// Perform the selected operation based on user input
+	if (o == 1)
 	{
 		printf("Enter the Element to be Inserted : ");
-		scanf("%d",&o);
+		scanf("%d", &o);
 		insert_fr(o);
-		printf("%d is Inserted at Front",o);
+		printf("%d is Inserted at Front", o);
 		goto op;
 	}
-	else if(o==2)
+	else if (o == 2)
 	{
 		printf("Enter the Element to be Inserted : ");
-		scanf("%d",&o);
+		scanf("%d", &o);
 		insert_end(o);
-		printf("%d is Inserted at End",o);
+		printf("%d is Inserted at End", o);
 		goto op;
 	}
-	else if(o==3)
+	else if (o == 3)
 	{
 		printf("Enter the Element to be Inserted : ");
-		scanf("%d",&o);
+		scanf("%d", &o);
 		printf("Enter the Key after the Element is to be Inserted : ");
-		scanf("%d",&k);
-		insert_key(k,o);
+		scanf("%d", &k);
+		insert_key(k, o);
 		goto op;
 	}
-	else if(o==4)
+	else if (o == 4)
 	{
 		delete_fr();
 		goto op;
 	}
-	else if(o==5)
+	else if (o == 5)
 	{
 		delete_end();
 		goto op;
 	}
-	else if(o==6)
+	else if (o == 6)
 	{
 		printf("Enter Element to be Deleted : ");
-		scanf("%d",&o);
+		scanf("%d", &o);
 		delete_key(o);
 		goto op;
 	}
-	else if(o==7)
+	else if (o == 7)
 	{
 		printf("Enter the Element to be Searched : ");
-		scanf("%d",&o);
+		scanf("%d", &o);
 		search(o);
 		goto op;
 	}
-	else if(o==8)
+	else if (o == 8)
 	{
 		display();
 		goto op;
 	}
-	else if(o==9)
+	else if (o == 9)
 	{
 		printf("Program Terminated");
 	}
@@ -97,173 +107,186 @@ int main()
 	}
 	return 0;
 }
+
+// Function to insert a node at the front of the linked list
 int insert_fr(int it)
 {
-	new=(struct node*)malloc(sizeof(struct node));
-	new->ln=head;
-	new->dt=it;
-	head=new;
+	new = (struct node *)malloc(sizeof(struct node));
+	new->ln = head;
+	new->dt = it;
+	head = new;
 	return 0;
 }
+
+// Function to insert a node at the end of the linked list
 int insert_end(int it)
 {
-	new=(struct node*)malloc(sizeof(struct node));
-	new->dt=it;
-	new->ln=NULL;
-	if(head==NULL)
+	new = (struct node *)malloc(sizeof(struct node));
+	new->dt = it;
+	new->ln = NULL;
+	if (head == NULL)
 	{
-		head=new;
+		head = new;
 	}
 	else
 	{
-		ptr=head;
-		while(ptr->ln!=NULL)
+		ptr = head;
+		while (ptr->ln != NULL)
 		{
-			ptr=ptr->ln;
+			ptr = ptr->ln;
 		}
 	}
-	ptr->ln=new;
+	ptr->ln = new;
 	return 0;
 }
-int insert_key(int k,int x)
+
+// Function to insert a node after a specified key node in the linked list
+int insert_key(int k, int x)
 {
-	if(head==NULL)
+	if (head == NULL)
 	{
-		printf("Search Failed,Insertion is not possible ");
+		printf("Search Failed, Insertion is not possible ");
 	}
 	else
 	{
-		ptr=head;
-		while((ptr->dt!=k)&&(ptr->ln!=NULL))
+		ptr = head;
+		while ((ptr->dt != k) && (ptr->ln != NULL))
 		{
-			ptr=ptr->ln;
+			ptr = ptr->ln;
 		}
-		if(ptr->dt!=k)
+		if (ptr->dt != k)
 		{
-			printf("Search Failed,Insertion is not possible ");
+			printf("Search Failed, Insertion is not possible ");
 		}
 		else
 		{
-			new=(struct node*)malloc(sizeof(struct node));
-			new->dt=x;
-			new->ln=ptr->ln;
-			ptr->ln=new;
-			printf("%d is Inserted after %d ",x,k);			
+			new = (struct node *)malloc(sizeof(struct node));
+			new->dt = x;
+			new->ln = ptr->ln;
+			ptr->ln = new;
+			printf("%d is Inserted after %d ", x, k);
 		}
-		
 	}
 	return 0;
 }
+
+// Function to delete a node from the front of the linked list
 int delete_fr()
 {
-	if(head==NULL)
+	if (head == NULL)
 	{
 		printf("List is Empty");
 	}
 	else
 	{
-		temp=head;
-		head=head->ln;
-		printf("%d is Deleted",temp->dt);
+		temp = head;
+		head = head->ln;
+		printf("%d is Deleted", temp->dt);
 		free(temp);
 	}
 	return 0;
 }
+
+// Function to delete a node from the end of the linked list
 int delete_end()
 {
 	struct node *prev;
 	struct node *curr;
-	if(head==NULL)
+	if (head == NULL)
 	{
 		printf("List is Empty");
 	}
-	else if(head->ln==NULL)
+	else if (head->ln == NULL)
 	{
-		temp=head;
-		head=NULL;
-		printf("%d is Deleted",temp->dt);
+		temp = head;
+		head = NULL;
+		printf("%d is Deleted", temp->dt);
 		free(temp);
 	}
 	else
 	{
-		prev=head;
-		curr=head->ln;
-		while(curr->ln!=NULL)
+		prev = head;
+		curr = head->ln;
+		while (curr->ln != NULL)
 		{
-			prev=curr;
-			curr=curr->ln;
+			prev = curr;
+			curr = curr->ln;
 		}
-		prev->ln=NULL;
-		printf("%d is Deleted",curr->dt);
+		prev->ln = NULL;
+		printf("%d is Deleted", curr->dt);
 		free(curr);
 	}
 	return 0;
 }
+
+// Function to delete a node with a specified key from the linked list
 int delete_key(int k)
 {
-	if(head==NULL)
+	if (head == NULL)
 	{
 		printf("List is Empty");
 	}
-	else if(head->dt==k)
+	else if (head->dt == k)
 	{
-		temp=head;
-		head=head->ln;
+		temp = head;
+		head = head->ln;
 		free(temp);
 	}
 	else
 	{
 		struct node *prev;
-	    struct node *curr;
-		prev=head;
-		curr=head;
-		while((curr->dt!=k)&&(curr->ln!=NULL))
+		struct node *curr;
+		prev = head;
+		curr = head;
+		while ((curr->dt != k) && (curr->ln != NULL))
 		{
-			prev=curr;
-			curr=curr->ln;
+			prev = curr;
+			curr = curr->ln;
 		}
-		if(curr->dt!=k)
+		if (curr->dt != k)
 		{
 			printf("Search Key not found ");
 		}
 		else
 		{
-			prev->ln=curr->ln;
-			printf("%d is Deleted",curr->dt);
-			free(curr);			
+			prev->ln = curr->ln;
+			printf("%d is Deleted", curr->dt);
+			free(curr);
 		}
 	}
 	return 0;
 }
+
+// Function to display the linked list
 int display()
 {
-	if(head==NULL)
+	if (head == NULL)
 	{
 		printf("List is Empty");
 	}
 	else
 	{
 		printf("       ");
-		for(ptr=head;ptr->ln!=NULL;ptr=ptr->ln)
+		for (ptr = head; ptr->ln != NULL; ptr = ptr->ln)
 		{
 			printf("|---|   ");
 		}
 		printf("|---|  \n");
 		printf("HEAD");
-		ptr=head;
-		while(ptr->ln!=NULL)
+		ptr = head;
+		while (ptr->ln != NULL)
 		{
-			printf("-->| %d |",ptr->dt);
-			ptr=ptr->ln;
+			printf("-->| %d |", ptr->dt);
+			ptr = ptr->ln;
 		}
-		printf("-->| %d |-->NULL\n       ",ptr->dt);
-		ptr=head;
-		while(ptr->ln!=NULL)
+		printf("-->| %d |-->NULL\n       ", ptr->dt);
+		ptr = head;
+		while (ptr->ln != NULL)
 		{
 			printf("|---|   ");
-			ptr=ptr->ln;
+			ptr = ptr->ln;
 		}
 		printf("|---|");
-	}		
+	}
 	return 0;
 }
