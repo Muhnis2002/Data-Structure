@@ -169,3 +169,33 @@ int delete_fr()
 	}
 	return 0;
 }
+int delete_end()
+{
+	struct node *prev;
+	struct node *curr;
+	if(head==NULL)
+	{
+		printf("List is Empty");
+	}
+	else if(head->ln==NULL)
+	{
+		temp=head;
+		head=NULL;
+		printf("%d is Deleted",temp->dt);
+		free(temp);
+	}
+	else
+	{
+		prev=head;
+		curr=head->ln;
+		while(curr->ln!=NULL)
+		{
+			prev=curr;
+			curr=curr->ln;
+		}
+		prev->ln=NULL;
+		printf("%d is Deleted",curr->dt);
+		free(curr);
+	}
+	return 0;
+}
