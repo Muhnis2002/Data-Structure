@@ -199,3 +199,39 @@ int delete_end()
 	}
 	return 0;
 }
+int delete_key(int k)
+{
+	if(head==NULL)
+	{
+		printf("List is Empty");
+	}
+	else if(head->dt==k)
+	{
+		temp=head;
+		head=head->ln;
+		free(temp);
+	}
+	else
+	{
+		struct node *prev;
+	    struct node *curr;
+		prev=head;
+		curr=head;
+		while((curr->dt!=k)&&(curr->ln!=NULL))
+		{
+			prev=curr;
+			curr=curr->ln;
+		}
+		if(curr->dt!=k)
+		{
+			printf("Search Key not found ");
+		}
+		else
+		{
+			prev->ln=curr->ln;
+			printf("%d is Deleted",curr->dt);
+			free(curr);			
+		}
+	}
+	return 0;
+}
