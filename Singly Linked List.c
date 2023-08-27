@@ -154,3 +154,18 @@ int insert_key(int k,int x)
 	}
 	return 0;
 }
+int delete_fr()
+{
+	if(head==NULL)
+	{
+		printf("List is Empty");
+	}
+	else
+	{
+		temp=head;
+		head=head->ln;
+		printf("%d is Deleted",temp->dt);
+		free(temp);
+	}
+	return 0;
+}
