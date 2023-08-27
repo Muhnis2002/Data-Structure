@@ -105,3 +105,23 @@ int insert_fr(int it)
 	head=new;
 	return 0;
 }
+int insert_end(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->dt=it;
+	new->ln=NULL;
+	if(head==NULL)
+	{
+		head=new;
+	}
+	else
+	{
+		ptr=head;
+		while(ptr->ln!=NULL)
+		{
+			ptr=ptr->ln;
+		}
+	}
+	ptr->ln=new;
+	return 0;
+}
