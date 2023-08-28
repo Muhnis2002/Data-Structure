@@ -56,3 +56,16 @@ int push(int it)
 	printf("%d is Pushed to the Stack Top",it);
 	return 0;	
 }
+int pop()
+{
+	if(top==NULL)
+		printf("Stack is Empty");
+	else
+	{
+		ptr=top;
+		printf("%d is Poped from Stack",top->dt);
+		top=top->ln;
+		free(ptr);
+	}
+	return 0;
+}
