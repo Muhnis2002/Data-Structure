@@ -69,3 +69,17 @@ int pop()
 	}
 	return 0;
 }
+int display()
+{
+	if(top==NULL)
+		printf("Stack is Empty");
+	else
+	{
+	    printf("The Elements in the Stack are :\n");
+	    ptr=top;
+	    for(;ptr->ln!=NULL;ptr=ptr->ln)
+		    printf("          |  %d  |\n          |_____|\n",ptr->dt);
+	    printf("          |  %d  |\n          |_____|",ptr->dt);
+    }
+	return 0;
+}
