@@ -100,3 +100,94 @@ int display()
     }
 	return 0;
 }
+
+/*
+OUTPUT:
+___Stack Operations___
+1.Push
+2.Pop
+3.Display
+4.Terminate Program
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 3
+3 is Pushed to the Stack Top
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 5
+5 is Pushed to the Stack Top
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 8
+8 is Pushed to the Stack Top
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 1
+1 is Pushed to the Stack Top
+
+Enter the Option Number : 3
+The Elements in the Stack are :
+          |  1  |
+          |_____|
+          |  8  |
+          |_____|
+          |  5  |
+          |_____|
+          |  3  |
+          |_____|
+
+Enter the Option Number : 2
+1 is Poped from Stack
+
+Enter the Option Number : 3
+The Elements in the Stack are :
+          |  8  |
+          |_____|
+          |  5  |
+          |_____|
+          |  3  |
+          |_____|
+
+Enter the Option Number : 2
+8 is Poped from Stack
+
+Enter the Option Number : 3
+The Elements in the Stack are :
+          |  5  |
+          |_____|
+          |  3  |
+          |_____|
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 7
+7 is Pushed to the Stack Top
+
+Enter the Option Number : 3
+The Elements in the Stack are :
+          |  7  |
+          |_____|
+          |  5  |
+          |_____|
+          |  3  |
+          |_____|
+
+Enter the Option Number : 1
+Enter the Element to be Pushed : 9
+9 is Pushed to the Stack Top
+
+Enter the Option Number : 3
+The Elements in the Stack are :
+          |  9  |
+          |_____|
+          |  7  |
+          |_____|
+          |  5  |
+          |_____|
+          |  3  |
+          |_____|
+
+Enter the Option Number : 4
+Program Terminated
+
+------------------
+*/
