@@ -47,3 +47,12 @@ int main()
 	}
 	return 0;
 }
+int push(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->dt=it;
+	new->ln=top;
+	top=new;
+	printf("%d is Pushed to the Stack Top",it);
+	return 0;	
+}
