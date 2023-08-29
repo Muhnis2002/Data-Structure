@@ -119,3 +119,83 @@ int display()
 	}
 	return 0;
 }
+
+/*
+OUTPUT:
+___QUEUE OPERATIONS___
+1.Enqueue
+2.Dequeue
+3.Display
+4.Terminate Program
+Enter the Option Number  : 2
+Queue is Empty
+
+Enter the Option Number  : 2
+Queue is Empty
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 3
+3 is Enqueued
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 5
+5 is Enqueued
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 7
+7 is Enqueued
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 9
+9 is Enqueued
+
+Enter the Option Number  : 3
+________________________
+     |     |     |     |
+  3  |  5  |  7  |  9  |
+_____|_____|_____|_____|
+
+Enter the Option Number  : 2
+3 is Dequeued
+
+Enter the Option Number  : 3
+__________________
+     |     |     |
+  5  |  7  |  9  |
+_____|_____|_____|
+
+Enter the Option Number  : 2
+5 is Dequeued
+
+Enter the Option Number  : 3
+____________
+     |     |
+  7  |  9  |
+_____|_____|
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 8
+8 is Enqueued
+
+Enter the Option Number  : 3
+__________________
+     |     |     |
+  7  |  9  |  8  |
+_____|_____|_____|
+
+Enter the Option Number  : 1
+Enter the Element to be Enqueued : 6
+6 is Enqueued
+
+Enter the Option Number  : 3
+________________________
+     |     |     |     |
+  7  |  9  |  8  |  6  |
+_____|_____|_____|_____|
+
+Enter the Option Number  : 4
+Program Terminated
+
+--------------------------------
+
+*/
