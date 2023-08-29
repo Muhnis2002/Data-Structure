@@ -64,3 +64,23 @@ int enqueue(int it)
 	printf("%d is Enqueued\n",it);
 	return 0;
 }
+int dequeue()
+{
+	if(fr==NULL)
+		printf("Queue is Empty\n");
+	else if(fr==re)
+	{
+		tem=fr;
+		fr=re=NULL;
+		printf("%d is Dequeued\n",tem->dt);
+		free(tem);
+	}
+	else
+	{
+		tem=fr;
+		fr=fr->ln;
+		printf("%d is Dequeued\n",tem->dt);
+		free(tem);
+	}
+	return 0;
+}
