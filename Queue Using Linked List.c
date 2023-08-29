@@ -84,3 +84,24 @@ int dequeue()
 	}
 	return 0;
 }
+int display()
+{
+	if((fr==NULL)&&(re==NULL))
+		printf("!!Queue is Empty!!\n");
+	else
+	{
+		for(tem=fr;tem->ln!=NULL;tem=tem->ln)
+			printf("______");
+		printf("______\n");
+		for(tem=fr;tem->ln!=NULL;tem=tem->ln)
+			printf("     |");
+		printf("     |\n");
+		for(tem=fr;tem->ln!=NULL;tem=tem->ln)
+			printf("  %d  |",tem->dt);
+		printf("  %d  |\n",tem->dt);
+		for(tem=fr;tem->ln!=NULL;tem=tem->ln)
+			printf("_____|");			
+		printf("_____|\n");	
+	}
+	return 0;
+}
