@@ -49,3 +49,18 @@ int main()
 	}
 	return 0;
 }
+int enqueue(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->dt=it;
+	new->ln=NULL;
+	if(fr==NULL)
+		fr=re=new;
+	else
+	{
+		re->ln=new;
+		re=new;
+	}
+	printf("%d is Enqueued\n",it);
+	return 0;
+}
