@@ -98,3 +98,24 @@ int main()
 	}
 	return 0;
 }
+int insert_fr(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->dt=it;
+	if(head==NULL)
+	{
+		head=new;
+		new->ln=new;
+	}
+	else
+	{
+		ptr=head;
+		while(ptr->ln!=head)
+			ptr=ptr->ln;
+		new->ln=head;
+		head=new;
+		ptr->ln=head;
+	}
+	printf("%d is Inserted at Front",it);
+	return 0;
+}
