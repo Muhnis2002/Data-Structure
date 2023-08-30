@@ -227,3 +227,57 @@ int delete_end()
 	}
 	return 0;
 }
+int delete_key(int k)
+{
+	if(head==NULL)
+	{
+		printf("List is Empty !! Deletion is Not Possible !!");
+	}
+	else if(head->ln==head)
+	{
+		if(head->dt==k)
+		{
+			temp=head;
+			head=NULL;
+			printf("%d is Deleted",temp->dt);
+			free(temp);
+		}
+		else
+		{
+			printf("Key Data Not Found !! Deletion not Possible !!");
+		}
+	}
+	else if(head->dt==k)
+	{
+		temp=ptr=head;
+		while(ptr->ln!=head)
+		{
+			ptr=ptr->ln;
+		}
+		head=head->ln;
+		ptr->ln=head;
+		printf("%d is Deleted",temp->dt);
+		free(temp);
+	}
+	else
+	{
+		prev=head;
+		curr=head->ln;
+		while((curr->ln!=head)&&(curr->dt!=k))
+		{
+			prev=curr;
+			curr=curr->ln;
+		}
+		if(curr->dt==k)
+		{
+			prev->ln=curr->ln;
+			printf("%d is Deleted",curr->dt);
+			free(curr);
+		}
+		else
+		{
+			printf("Key ELement not Found !!Deletion is Not Possible ");
+		}
+	}
+	return 0;
+}
