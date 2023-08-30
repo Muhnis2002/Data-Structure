@@ -119,3 +119,25 @@ int insert_fr(int it)
 	printf("%d is Inserted at Front",it);
 	return 0;
 }
+int insert_end(int it)
+{
+	new=(struct node*)malloc(sizeof(struct node));
+	new->dt=it;
+	if(head==NULL)
+	{
+		new->ln=new;
+		head=new;
+	}
+	else
+	{
+		ptr=head;
+		while(ptr->ln!=head)
+		{
+			ptr=ptr->ln;
+		}
+		ptr->ln=new;
+		new->ln=head;
+	}
+	printf("%d is Inserted at End",it);
+	return 0;
+}
