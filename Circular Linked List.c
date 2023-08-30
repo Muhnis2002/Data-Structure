@@ -172,3 +172,30 @@ int insert_after(int it,int k)
 	}
 	return 0;
 }
+int delete_fr()
+{
+	if(head==NULL)
+	{
+		printf("!! List is Empty !! Delettion is Not Possible!!");
+	}
+	else if(head->ln==head)
+	{
+		temp=head;
+		head=NULL;
+		printf("%d is Deleted",temp->dt);
+		free(temp);		
+	}
+	else
+	{
+		temp=ptr=head;
+		while(ptr->ln!=head)
+		{
+			ptr=ptr->ln;
+		}
+		head=head->ln;
+		ptr->ln=head;
+		printf("%d is Deleted",temp->dt);
+		free(temp);
+	}
+	return 0;
+}
