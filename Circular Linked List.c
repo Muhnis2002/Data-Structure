@@ -199,3 +199,31 @@ int delete_fr()
 	}
 	return 0;
 }
+int delete_end()
+{
+	if(head==NULL)
+	{
+		printf("!!List is Empty !! Deletion is Not Possible ");
+	}
+	else if(head->ln==head)
+	{
+		temp=head;
+		head=NULL;
+		printf("%d is Deleted",temp->dt);
+		free(temp);
+	}
+	else
+	{
+		prev=head;
+		curr=head->ln;
+		while(curr->ln!=head)
+		{
+			prev=curr;
+			curr=curr->ln;
+		}
+		prev->ln=head;
+		printf("%d is Deleted",curr->dt);
+		free(curr);
+	}
+	return 0;
+}
