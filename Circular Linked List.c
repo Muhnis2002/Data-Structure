@@ -281,3 +281,31 @@ int delete_key(int k)
 	}
 	return 0;
 }
+int search(int k)
+{
+	if(head==NULL)
+	{
+		printf("List is Empty");
+	}
+	else
+	{
+		ptr=head;
+		while(ptr->dt!=k)
+		{
+			ptr=ptr->ln;
+			if(ptr==head)
+			{
+				break;
+			}
+		}
+		if(ptr->dt==k)
+		{
+			printf("Search Data Found");
+		}
+		else
+		{
+			printf("Search Data Not Found ");
+		}
+	}
+	return 0;
+}
