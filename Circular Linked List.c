@@ -309,3 +309,35 @@ int search(int k)
 	}
 	return 0;
 }
+int display()
+{
+	if(head==NULL)	
+	{
+		printf("List is Empty");
+	}
+	else
+	{
+		printf("       ");
+		for(ptr=head;ptr->ln!=head;ptr=ptr->ln)
+		{
+			printf("|---|   ");
+		}
+		printf("|---|  \n");
+		printf("HEAD");
+		ptr=head;
+		while(ptr->ln!=head)
+		{
+			printf("-->| %d |",ptr->dt);
+			ptr=ptr->ln;
+		}
+		printf("-->| %d |-->HEAD\n       ",ptr->dt);
+		ptr=head;
+		while(ptr->ln!=head)
+		{
+			printf("|---|   ");
+			ptr=ptr->ln;
+		}
+		printf("|---|");
+	}		
+	return 0;
+}
