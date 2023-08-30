@@ -141,3 +141,34 @@ int insert_end(int it)
 	printf("%d is Inserted at End",it);
 	return 0;
 }
+int insert_after(int it,int k)
+{
+	if(head==NULL)
+	{
+		printf("Search Data Not Found");
+	}
+	else
+	{
+		while(ptr->dt!=k)
+		{
+			ptr=ptr->ln;
+			if(ptr==head)
+			{
+				break;
+			}
+		}
+		if(ptr->dt==k)
+		{
+			new=(struct node*)malloc(sizeof(struct node));
+			new->dt=it;
+			new->ln=ptr->ln;
+			ptr->ln=new;
+			printf("%d is Inserted after %d",it,k);
+		}
+		else
+		{
+			printf("Search Data Not Found,Insertion Not Possible");
+		}
+	}
+	return 0;
+}
